@@ -63,7 +63,7 @@ Abc@1234
 
 ## Authors ✍️
 
-- Salwa Shamma - 4010405
-- Samah Shamma - 4010403
-- Sana Shamma - 4010404
-- Samah Channa - 4010318
+- Salwa Shamma
+- Samah Shamma
+- Sana Shamma
+- Samah Channa
