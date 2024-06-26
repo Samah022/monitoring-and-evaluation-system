@@ -1,6 +1,6 @@
 # Monitoring-and-Evaluation-System 📋🖊️
 
-This project is a Monitoring and Evaluation System developed as part of the SE492 course. It is designed a system saves time and effort by mitigating the need for routine manual inspections to ensure compliance with standards to utilize the power of Artificial Intelligence (AI) to automate these procedures.
+This project is a Monitoring and Evaluation System developed as part of the Capstone Project. It is designed as a system that saves time and effort by mitigating the need for routine manual inspections to ensure compliance with standards to utilize the power of Artificial Intelligence (AI) to automate these procedures.
 
 ## Installation 🛠
 
