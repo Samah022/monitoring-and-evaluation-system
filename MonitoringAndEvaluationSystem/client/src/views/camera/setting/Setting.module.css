@@ -1,0 +1,29 @@
+.mainContainer{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.title{
+    font-size: calc(100vw / 60);
+    border-bottom: 1px solid black;
+    padding-bottom: 16px;
+    margin: 0px;
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end ;
+}
+
+.label{
+    font-weight: bold;
+}

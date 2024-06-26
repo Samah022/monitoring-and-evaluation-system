@@ -1,0 +1,57 @@
+.container {
+  width: calc(100% / 2.1);
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container:hover > img {
+  opacity: 0.6;
+}
+
+.header {
+  text-align: left;
+  margin: 0;
+  padding: 15px;
+  color: white;
+  font-weight: 800;
+  font-size: var(--primary-font-size);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color:  var(--primary-color);
+}
+
+.zoomInMapIcon {
+  color:  var(--secondary-color);
+  background-color: rgba(255, 166, 32, 0.4);
+  border-radius: 50%;
+  transform: scale(2);
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(205, 203, 203);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+
+
+
+

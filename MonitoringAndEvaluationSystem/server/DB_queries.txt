@@ -1,0 +1,43 @@
+# CREATE TABLE Criteria ( 
+#     Name VARCHAR(255) NOT NULL, 
+#     Camera_ID INT NOT NULL, 
+#     PRIMARY KEY (Name, Camera_ID), 
+#     FOREIGN KEY (Camera_ID) REFERENCES Camera(Camera_ID) 
+# ); 
+ 
+# CREATE TABLE Camera ( 
+#      Camera_ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL, 
+#      Name VARCHAR(255) NOT NULL, 
+#      Link VARCHAR(255) UNIQUE NOT NULL 
+# );
+
+# select * from Camera
+
+# -- DELETE FROM Criteria;
+# -- DELETE FROM Camera;
+
+# -- UPDATE Camera
+# -- SET Name = 'Front Counter', Link = 'rtsp://192.168.188.239:8080/h264_ulaw.sdp'
+# -- WHERE Camera_ID = 1;
+
+# -- UPDATE Camera
+# -- SET Name = 'Kitchen (Grills)', Link = 'rtsp://192.168.188.47:8080/h264_ulaw.sdp'
+# -- WHERE Camera_ID = 2;
+
+# -- DELETE FROM Camera WHERE Camera_ID = 3;
+
+# -- CREATE TABLE Criteria ( 
+# --      Name VARCHAR(255) NOT NULL, 
+# --      Camera_ID INT NOT NULL, 
+# --      PRIMARY KEY (Name, Camera_ID), 
+# --      FOREIGN KEY (Camera_ID) REFERENCES Camera(Camera_ID) 
+# --  ); 
+
+# -- DELETE FROM Camera WHERE Camera_ID NOT IN (1,2)
+
+# -- CREATE TABLE Super_Admin (
+# -- SuperAdmin_ID INT IDENTITY(1,1) PRIMARY KEY,
+# --   Email VARCHAR(255) NOT NULL UNIQUE,
+# --   Password VARCHAR(255) NOT NULL
+# -- );
+

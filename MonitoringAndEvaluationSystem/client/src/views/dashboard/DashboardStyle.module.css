@@ -1,0 +1,17 @@
+.container{
+  width: 100%;
+  padding: 25px;
+  overflow-y: scroll;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+

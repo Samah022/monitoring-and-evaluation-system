@@ -1,0 +1,25 @@
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(100vw / 4);
+    height: calc(100vh / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: calc(100vw/90);
+    color: #243465;
+    align-self: flex-start;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}

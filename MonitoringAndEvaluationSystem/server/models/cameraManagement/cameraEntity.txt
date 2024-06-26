@@ -1,0 +1,13 @@
+# in the cloud only
+from pydantic import BaseModel
+
+class NewCameraEntity(BaseModel):
+    name: str
+    link: str
+    criteria: list #may this wrong as user may not enter criteria
+
+class GetCameraEntity(BaseModel):
+    id: int
+    name: str
+    link: str
+    criteria: list

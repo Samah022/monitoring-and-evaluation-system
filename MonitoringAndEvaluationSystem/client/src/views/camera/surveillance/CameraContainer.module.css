@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    overflow-y: scroll;
+    height: 90vh;
+    width: 100%;
+    padding: 25px;
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }

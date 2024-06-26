@@ -1,0 +1,10 @@
+.button{
+    color: white;
+    background-color:var(--secondary-color);
+    font-size: var(--primary-font-size);
+}
+
+.button:hover {
+    background-color: grey;
+}
+

@@ -1,0 +1,42 @@
+.container{
+    width: 100vw;
+    height: 100vh; 
+    position: relative;
+}
+.header{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center; 
+    justify-content: space-between;
+}
+.label{
+    height: 3vh;
+    width: 20vw; 
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    padding: 30px;
+    border-radius: 0px 0px 20px 0px;
+    background-color: var(--primary-color);
+}
+.closeIcon {
+    margin-right: 30px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.4);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    transform: scale(2);
+}
+.image{
+    height: 100%;
+    width: 100%;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(205, 203, 203);
+}

@@ -1,0 +1,13 @@
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+
+}
+
+.type {
+    color: #555;
+    text-align: center;
+    font-size: 80%;
+}

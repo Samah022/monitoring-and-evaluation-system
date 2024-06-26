@@ -1,0 +1,63 @@
+# Cloud
+from ...DB_connection import conn, cursor
+
+from .CameraDB import CameraDB
+from .emotionDB import EmotionDB
+from .uniformDB import UniformDB
+
+class DBFacade:
+
+    def __init__(self):
+        self.__cameraDB = CameraDB()
+        self.__emotiondb = EmotionDB()
+        self.__uniformdb = UniformDB()
+
+    def add_camera(self, camera):
+        return self.__cameraDB.addCamera(camera, conn, cursor)
+
+    def get_all_cameras (self):
+        return self.__cameraDB.getAllCameras(conn, cursor)
+
+    def get_emotion_current_data(self):
+         return self.__emotiondb.getCurrentData( conn, cursor)
+
+    def get_emotion_month_data(self):
+         data = self.__emotiondb.getMonthData( conn, cursor)
+         for item in data:
+             item["time"] = item["time"].isoformat()
+         return data
+
+    def get_emotion_today_data(self):
+         data = self.__emotiondb.getTodayData( conn, cursor)
+         for item in data:
+             item["time"] = item["time"].isoformat()
+         return data
+
+    def get_emotion_week_data(self):
+         data = self.__emotiondb.getWeekData( conn, cursor)
+         for item in data:
+             item["time"] = item["time"].isoformat()
+         return data
+
+    def get_uniform_current_data(self):
+         return self.__uniformdb.getCurrentData( conn, cursor)
+
+    def get_uniform_month_data(self):
+         data = self.__uniformdb.getMonthData( conn, cursor) 
+         for item in data:
+             item["time"] = item["time"].isoformat()
+         return data
+
+    def get_uniform_today_data(self):
+         data = self.__uniformdb.getTodayData( conn, cursor)
+         for item in data:
+             item["time"] = item["time"].isoformat()
+         return data
+
+    def get_uniform_week_data(self):
+         data = self.__uniformdb.getWeekData( conn, cursor)
+         for item in data:
+             item["time"] = item["time"].isoformat()
+         return data
+
+

@@ -1,0 +1,42 @@
+#cloud
+from ..cameraManagement.cameraEntity import NewCameraEntity, GetCameraEntity
+
+class CameraDB:
+    
+    # Cloud DB
+    def addCamera(self, camera, conn, cursor):
+        my_camera = NewCameraEntity(name=camera.get_camera_name(), link=camera.get_camera_URL(), criteria=camera.get_evaluation_criteria())
+        cursor.execute("INSERT INTO Camera (Name, Link) VALUES (?, ?)", (my_camera.name, my_camera.link))        
+        conn.commit()
+
+        # Retrieve the last inserted ID from the Camera table
+        cursor.execute("SELECT MAX(Camera_ID) FROM Camera")
+        camera_id = cursor.fetchone()[0]
+
+        if my_camera.criteria is not None:
+            for item in my_camera.criteria:
+                cursor.execute("INSERT INTO Criteria (Name, Camera_ID) VALUES (?, ?)", (item, camera_id))
+                conn.commit()
+
+        return True
+    
+    # Cloud DB
+    def getAllCameras(self, conn, cursor):
+        cursor.execute("SELECT * FROM Camera")
+        cameras = cursor.fetchall()
+
+        result = []
+        for camera in cameras:
+            camera_id = camera[0]
+            camera_name = camera[1]
+            camera_link = camera[2]
+
+            cursor.execute("SELECT Name FROM Criteria WHERE Camera_ID = ?", (camera_id,))
+            criteria = cursor.fetchall()
+            criteria = [item[0] for item in criteria]
+
+            my_camera = GetCameraEntity(id=camera_id, name=camera_name, link=camera_link, criteria=criteria)
+            result.append(my_camera)
+        conn.commit()
+
+        return result
